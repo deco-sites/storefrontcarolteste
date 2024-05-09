@@ -1,5 +1,7 @@
+import { VideoWidget } from "apps/admin/widgets.ts";
 
 export interface Props {
+  video: VideoWidget;
   src: string;
   title: string;
 }
@@ -12,7 +14,7 @@ function VideoComponent(props: Props) {
         <h2>{props.title}</h2>
         <video
           class="w-full"
-          src={props.src}
+          src={props.video}
           controls={true}
           height={800}
           width={800}
