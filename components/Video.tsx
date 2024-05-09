@@ -1,4 +1,5 @@
 import { VideoWidget } from "apps/admin/widgets.ts";
+import Video from "apps/website/components/Video.tsx";
 
 export interface Props {
   video: VideoWidget;
@@ -12,7 +13,7 @@ function VideoComponent(props: Props) {
     <div class="flex justify-center items-center h-screen ">
       <div class="w-3/4 max-w-screen-lg">
         <h2>{props.title}</h2>
-        <video
+        <Video
           class="w-full"
           src={props.video}
           controls={true}
